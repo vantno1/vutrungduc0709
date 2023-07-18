@@ -1,0 +1,658 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&family=Open+Sans:wght@600&family=Roboto:wght@300;400&display=swap");
+
+:root {
+  --orange: #ffa500;
+}
+
+* {
+  font-family: "Nunito", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-transform: capitalize;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  transition: all 0.2s linear;
+}
+::selection {
+  background: var(--orange);
+  color: #fff;
+}
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-padding-top: 6rem;
+  scroll-behavior: smooth;
+}
+
+section {
+  /* padding: 2rem 9%; */
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f6f6f6;
+  flex-direction: column;
+}
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  background: var(--orange);
+  color: #fff;
+  padding: 0.8rem 3rem;
+  border: 2rem solid var(--orange);
+  cursor: pointer;
+  font-size: 1.7rem;
+}
+
+.btn:hover {
+  background: rgba(255, 165, 0, 0.2);
+  color: var(--orange);
+}
+
+/* --------------------Làm chữ giới thiệu---------------- */
+.heading {
+  text-align: center;
+  padding: 2.5rem 0;
+}
+
+.heading span {
+  font-size: 3.5rem;
+  background-color: rgba(255, 165, 0, 0.2);
+  color: var(--orange);
+  border-radius: 0.5rem;
+  padding: 0.2rem 1rem;
+}
+
+/* ----- header section ------- */
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #333;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 9%;
+}
+
+header .logo {
+  font-size: 2.5rem;
+  font-weight: bolder;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+header .logo span {
+  color: var(--orange);
+}
+
+header .navbar a {
+  color: #fff;
+  font-size: 2rem;
+  margin: 0.8rem;
+}
+
+header .navbar a:hover {
+  color: var(--orange);
+}
+
+header .icons i {
+  font-size: 2.5rem;
+  color: #fff;
+  cursor: pointer;
+  margin-right: 2rem;
+}
+
+header .icons i:hover {
+  color: var(--orange);
+}
+
+header .search-bar-container {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  padding: 1.5rem 2rem;
+  background: #333;
+  border-top: 0.1rem solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  z-index: 1001;
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+
+header .search-bar-container.active {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+header .search-bar-container #search-bar {
+  width: 100%;
+  padding: 1rem;
+  text-transform: none;
+  color: #333;
+  font-size: 1.7rem;
+  border-radius: 0.5rem;
+}
+
+header .search-bar-container label {
+  color: #fff;
+  cursor: pointer;
+  font-size: 3rem;
+  margin-left: 1.5rem;
+}
+
+header .search-bar-container label:hover {
+  color: var(--orange);
+}
+/* -----------------------header section end--------------------- */
+
+/* -----------------------login form start------------------------ */
+.login-form-container {
+  position: fixed;
+  top: -120%;
+  left: 0;
+  z-index: 10000;
+  min-height: 100vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-form-container.active {
+  top: 0;
+}
+
+.login-form-container form {
+  margin: 2rem;
+  padding: 1.5rem 2rem;
+  border-radius: 0.5rem;
+  background: #fff;
+  width: 50rem;
+}
+
+.login-form-container form h3 {
+  font-size: 3rem;
+  color: #444;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 1 rem 0;
+}
+
+.login-form-container form .box {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.7rem;
+  color: #333;
+  margin: 0.6rem 0;
+  border: 0.1rem solid rgba(0, 0, 0, 0.3);
+  text-transform: none;
+}
+
+.login-form-container form .box:focus {
+  border-color: var(--orange);
+}
+
+.login-form-container form #remember {
+  margin: 2rem 0;
+}
+
+.login-form-container form label {
+  font-size: 1.5rem;
+}
+
+.login-form-container form .btn {
+  display: block;
+  width: 100%;
+}
+
+.login-form-container form p {
+  padding: 0.5rem 0;
+  font-size: 1.5rem;
+  color: #666;
+}
+
+.login-form-container form p a {
+  color: var(--orange);
+}
+
+.login-form-container form p a:hover {
+  color: #333;
+  text-decoration: underline;
+}
+
+.login-form-container #form-close {
+  position: absolute;
+  top: 2rem;
+  right: 3rem;
+  font-size: 5rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+#menu-bar {
+  color: #fff;
+  border: 0.1rem solid #fff;
+  border-radius: 0.5rem;
+  font-size: 3rem;
+  padding: 5rem 1.2rem;
+  cursor: pointer;
+  display: none;
+}
+/* ------ Login form end ------------ */
+
+/* ------ Section banner start ------- */
+
+section {
+  min-height:100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+  position: relative;
+  z-index: 0;
+}
+
+section .banner-image img {
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.section .controls {
+  padding: 1rem;
+  border-radius: 5rem;
+  background: rgba(0, 0, 0, 0.7);
+  position: relative;
+  top: 10rem;
+}
+
+.section .controls .vid-btn {
+  height: 2rem;
+  width: 2rem;
+  display: inline-block;
+  border-radius: 50%;
+  background: #fff;
+  cursor: pointer;
+  margin: 0.5rem;
+}
+
+.section .controls .vid-btn.active {
+  background: var(--orange);
+}
+/* ------ Section banner end ------- */
+
+/* ------ Section decribe start --------- */
+.describe {
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+.describe-icon {
+  min-width: 25%;
+  position: relative;
+  left: 100px;
+}
+.describe-icon-1 img {
+  position: relative;
+  left: 14px;
+}
+.describe-icon-1 {
+  background-color: rgba(6, 80, 117, 0.1);
+  width: 56px;
+  padding-bottom: 18px;
+  padding-top: 18px;
+  border-bottom-left-radius: 9999px;
+  border-bottom-right-radius: 9999px;
+  border-top-left-radius: 9999px;
+  border-top-right-radius: 9999px;
+}
+
+.describe-icon-1 .number-auto {
+  font-size: 14px;
+  margin-left: 18px;
+  margin-right: 8px;
+  font-weight: 500;
+  line-height: 20px;
+  text-align: left;
+  margin-top: 8px;
+  color: rgba(104, 113, 118, 1);
+}
+.describe-icon i {
+  font-size: 2.5rem;
+  color: #fff;
+  cursor: pointer;
+  margin-right: 2rem;
+}
+.describe-icon-2 {
+  background-color: rgba(6, 80, 117, 0.1);
+  width: 56px;
+  /* padding-bottom: 18px;
+    padding-top: 18px; */
+  border-bottom-left-radius: 9999px;
+  border-bottom-right-radius: 9999px;
+  border-top-left-radius: 9999px;
+  border-top-right-radius: 9999px;
+}
+.describe-icon-2.1 {
+  display: block;
+}
+.describe-icon-2.2 {
+  display: block;
+}
+.describe-content {
+  min-width: 50%;
+}
+.describe-content p {
+  color: rgb(104, 113, 118);
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: center;
+  margin-bottom: 16px;
+}
+.describe-content h2 {
+  color: rgba(3, 18, 26, 1);
+  font-size: 32px;
+  line-height: 40px;
+  margin-top: 16px;
+
+  margin-bottom: 32px;
+}
+.describe-content h3 {
+  color: rgb(3, 18, 26);
+  margin-top: 16px;
+  margin-bottom: 16px;
+  font-size: 20px;
+}
+.describe-content text {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 26px;
+}
+.describe-content em {
+  font-style: italic;
+  font-size: 16px;
+  margin-top: 8px;
+  margin-bottom: 16px;
+  font-weight: 800;
+}
+.describe-content a {
+  font-size: 18px;
+  margin-top: 8px;
+  margin-bottom: 16px;
+  font-weight: 800;
+  font-style: normal;
+  text-decoration: underline;
+}
+.describe-menu {
+  min-width: 25%;
+}
+.describe-container-8,
+.describe-container-1,
+.describe-container-2,
+.describe-container-3,
+.describe-container-4,
+.describe-container-5,
+.describe-container-6,
+.describe-container-7 strong {
+  /* margin-left: 30px;
+    margin-top: 30px; */
+  margin-bottom: 30px;
+  font-weight: 900;
+  font-size: 16px;
+}
+.describe img {
+  width: 100%;
+  object-fit: cover;
+  margin-bottom: 16px;
+  margin-top: 16px;
+}
+.describe-container-3 text {
+  margin-bottom: 16px;
+  margin-top: 16px;
+}
+
+/* ------ Section decribe end --------- */
+
+/* ------ Section subcribe start ---------- */
+
+.subcribe {
+  background-color: rgba(0, 124, 232, 1);
+  width: 100%;
+  height: 150px;
+  display: flex;
+}
+.subcribe-left,
+.subcribe-right {
+  margin-top: 16px;
+  margin-bottom: 16px;
+  /* margin-right: 20px; */
+}
+.subcribe-left {
+  max-width: 35%;
+  margin-left: 40px;
+}
+.subcribe-right {
+  display: flex;
+  position: relative;
+  top: 35px;
+  max-width: 65%;
+  left: 120px;
+}
+.subcribe-left h2 {
+  margin-bottom: 8px;
+  font-size: 20px;
+  color: rgba(255, 255, 255, 1);
+  line-height: 24px;
+  font-weight: 700;
+  text-align: left;
+}
+.subcribe-left p {
+  padding-bottom: 16px;
+  color: rgba(255, 255, 255, 1);
+  line-height: 24px;
+  font-size: 16px;
+  text-align: left;
+  font-weight: 500;
+}
+.subcribe-input {
+  display: flex;
+}
+/* .subcribe-input-img img{
+    width:24px;
+    height: 24px;
+    position: relative;
+    background-color: rgba(255,255,255,1.00); 
+    border-radius: 5px;
+    top: 7px;
+}
+.subcribe-input-img{
+    background-color: rgba(255,255,255,1.00); 
+    position: relative;
+    left: 3px;
+    width:24px;
+    height: 40px;
+    display: none;
+    
+} */
+.subcribe-input input {
+  font-size: 16px;
+  width: 500px;
+  height: 40px;
+  border-radius: 5px;
+}
+.subcribe-right button:hover {
+  background-color: rgb(185, 221, 245);
+  cursor: pointer;
+}
+.subcribe-right button {
+  background-color: rgba(236, 248, 255, 1);
+  width: 100px;
+  height: 40px;
+  border-radius: 5px;
+  margin-left: 15px;
+}
+.subcribe-right a {
+  color: rgba(1, 148, 243, 1);
+  font-size: 16px;
+  text-align: center;
+  font-weight: 700;
+}
+/* ------ Section subcribe end ---------- */
+
+/*-------------------------Footer section start--------------------  */
+
+.footer {
+  background: #333;
+  width: 100%;
+  height: 100%;
+}
+
+.footer .box-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.footer .box-container .box {
+  padding: 1rem 0;
+  flex: 1 1 25rem;
+}
+
+.footer .box-container .box h3 {
+  font-size: 2.5rem;
+  padding: 0.7rem 0;
+  color: #fff;
+}
+
+.footer .box-container .box p {
+  font-size: 1.5rem;
+  padding: 0.7rem 0;
+  color: #eee;
+}
+
+.footer .box-container .box a {
+  display: block;
+  font-size: 1.5rem;
+  padding: 0.7rem 0;
+  color: #eee;
+}
+
+.footer .box-container .box a:hover {
+  color: var(--orange);
+  text-decoration: underline;
+}
+
+.footer .credit {
+  text-align: center;
+  padding: 2rem 1rem;
+  margin-top: 1rem;
+  font-size: 2rem;
+  font-weight: normal;
+  color: #fff;
+  border-top: 0.1rem solid rgba(255, 255, 255, 0.2);
+}
+
+.footer .credit span {
+  color: var(--orange);
+}
+/*-------------------------Footer section end--------------------  */
+
+/* media queries */
+@media (max-width: 1400px) {
+  html {
+    font-size: 55%;
+  }
+  .subcribe-right input{
+    width: 350px;
+  }
+}
+@media (max-width: 1200px) {
+  html {
+    font-size: 55%;
+  }
+  .subcribe-right input{
+    width: 250px;
+  }
+  .subcribe-left p{
+    font-size: 12px;
+  }
+}
+@media (max-width: 991px) {
+  header {
+    padding: 2rem;
+  }
+  section {
+    /* padding: 2rem; */
+  }
+  .subcribe-right input{
+    width: 200px;
+  }
+  .subcribe-left p{
+    font-size: 12px;
+  }
+}
+@media (max-width: 768px) {
+  #menu-bar {
+    display: initial;
+  }
+  header .navbar {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    background: #333;
+    border-top: 0.1rem solid rgba(255, 255, 255, 0.2);
+    padding: 1rem 2rem;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+  header .navbar.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  header .navbar a {
+    display: block;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    background: #222;
+  }
+  .subcribe .subcribe-left h2,
+  .subcribe-left p {
+    font-size:10px;
+    position: relative;
+    right: 180px;
+  }
+  .subcribe-right .subcribe-input input {
+    width: 200px;
+    position: relative;
+    right: 180px;
+  }
+  /* .subcribe-right .subcribe-input button {
+   
+    position: relative;
+    right: 180px;
+  } */
+}
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+  .heading span {
+    font-size: 2.5rem;
+  }
+}
